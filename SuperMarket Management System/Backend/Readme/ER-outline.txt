@@ -1,0 +1,48 @@
+SuperMarket.db
+
+	* Admin
+	
+		> id = PK not null Varchar(255)
+		> name/username = not null varchar(255)
+		> password = not null varchar(255)
+		
+	*Customers
+
+		>id (pk) not null varchar(255)
+		>name not null varchar(255)
+		>phone not null varchar(255)
+		>pointDis int not null
+		
+	*Employes
+	
+		> id  varchar(255) not null (pk)
+		> name /varchar(255) not null 
+		> attendance  bool
+		> joining date  not null Date
+		> phone not null varchar(255)
+		> email not null varchar(255)
+		
+	*Attendance
+	
+		> id (pk) varchar(255) not null
+		> Employes(id)
+		> DateOfday Date not null
+		> status bool not null
+			
+	*Product
+
+		> id (pk) not null varchar(255)
+		> productname not null varchar(255)
+		> price int not null 
+		> Manifac varchar(255) not null
+		> mkd Date not null
+		> exprieDate Date not null
+		> discount int not null 
+		
+	*PurchaseTable
+	
+		> id (pk) not null varchar(255)
+		> Customers(id) 
+		> Product(id)
+		> purchasedate Date not null
+		> purchaseTime Date not null
